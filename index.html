@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伊甸园之外-探索失落文明与奇幻世界的神秘领域</title>
+    <meta name="description" content="伊甸园之外是一个探索失落文明、神秘传说与奇幻世界的综合性信息平台，提供神话解析、考古发现、神秘地点探秘及相关文化解读，带你走进人类想象与历史的边界。">
+    <meta name="keywords" content="伊甸园之外,失落文明,神秘传说,奇幻世界,神话解析,考古发现,神秘地点,人类起源,禁区探秘,未解之谜">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'SimSun', serif;
+            background-color: #0d1117;
+            color: #d4d4d4;
+            line-height: 1.75;
+            font-size: 16px;
+        }
+        .wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        /* Header */
+        .site-header {
+            background: linear-gradient(145deg, #1a1e26 0%, #0d1117 100%);
+            border-bottom: 1px solid #2a2e38;
+            padding: 20px 0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area h1 {
+            font-size: 2.2rem;
+            font-weight: normal;
+            color: #e6c87c;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(230, 200, 124, 0.3);
+        }
+        .logo-area .sub {
+            font-size: 0.85rem;
+            color: #8a8f98;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #b8bcc4;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #e6c87c;
+            border-bottom-color: #e6c87c;
+        }
+        /* Hero */
+        .hero {
+            position: relative;
+            padding: 90px 0 80px;
+            background: radial-gradient(ellipse at 30% 40%, #2a2f3a 0%, #0d1117 70%);
+            border-bottom: 1px solid #2e323c;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            color: #e8d5a3;
+            font-weight: normal;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            color: #b0b5bd;
+        }
+        .hero .meta-tag {
+            display: inline-block;
+            background: #1f242e;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: #c9b26b;
+            border: 1px solid #3a3f4b;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        /* Section general */
+        .section-title {
+            font-size: 1.8rem;
+            color: #e6c87c;
+            font-weight: normal;
+            margin: 50px 0 25px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #2e323c;
+            position: relative;
+            letter-spacing: 2px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #c9a84c;
+        }
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #151a22;
+            border: 1px solid #2a2f3a;
+            border-radius: 8px;
+            padding: 25px 20px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: #8a7a4a;
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            color: #d9c489;
+            font-weight: normal;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .card p {
+            color: #a6abb4;
+            font-size: 0.95rem;
+        }
+        .card .more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #c9a84c;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px dotted #5a4e2a;
+        }
+        .card .more:hover {
+            color: #e6c87c;
+            border-bottom: 1px solid #e6c87c;
+        }
+        /* Two column */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+        .story-panel {
+            background: #131820;
+            padding: 28px;
+            border-left: 3px solid #8a7a4a;
+            border-radius: 0 8px 8px 0;
+        }
+        .story-panel h3 {
+            color: #d9c489;
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        .story-panel p {
+            margin-bottom: 15px;
+            color: #b0b5bd;
+        }
+        /* List */
+        .list-group {
+            list-style: none;
+        }
+        .list-group li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #2e323c;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+        }
+        .list-group li::before {
+            content: '◆';
+            color: #8a7a4a;
+            font-size: 0.7rem;
+        }
+        .list-group a {
+            color: #b8bcc4;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .list-group a:hover {
+            color: #e6c87c;
+        }
+        .list-group .date {
+            margin-left: auto;
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 30px;
+            background: #151a22;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .faq-item h3 {
+            color: #d9c489;
+            font-size: 1.15rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            color: #a6abb4;
+        }
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid #2e323c;
+            margin-top: 60px;
+            padding: 35px 0;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .site-footer a {
+            color: #8a8f98;
+            text-decoration: none;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        @media (max-width: 600px) {
+            .wrapper {
+                padding: 0 18px;
+            }
+            .hero {
+                padding: 60px 0;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrapper header-inner">
+            <div class="logo-area">
+                <h1>伊甸园之外</h1>
+                <div class="sub">Beyond the Garden</div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#concept">概念溯源</a></li>
+                    <li><a href="#realms">神秘领域</a></li>
+                    <li><a href="#stories">传说解读</a></li>
+                    <li><a href="#expeditions">探秘之旅</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="wrapper">
+                <h2>伊甸园之外</h2>
+                <p>当人类走出那座传说中的花园，世界便展开了无尽的面貌。这里是关于失落文明、未知土地与人类想象力的探索档案库。</p>
+                <span class="meta-tag">神话 · 考古 · 秘境 · 哲思</span>
+            </div>
+        </section>
+
+        <!-- 概念简介 -->
+        <section id="concept" class="wrapper">
+            <h2 class="section-title">何谓「伊甸园之外」</h2>
+            <p style="margin-bottom:20px;">「伊甸园之外」既是一个地理隐喻，也是一种精神坐标。在西方神话传统中，伊甸园象征着原初的完美与庇护；而“之外”则意味着人类离开纯真状态后所面对的真实世界——那片充满未知、考验、探索与自我认知的土地。这个概念被广泛运用于文学、艺术、影视与哲学讨论中，成为人类追寻根源与意义的象征符号。</p>
+            <p>本站以这一概念为起点，汇集与之相关的神话重释、历史假说、文化批评与秘境见闻，为读者提供一种跨学科的观察视角。</p>
+        </section>
+
+        <!-- 神秘领域卡片 -->
+        <section id="realms" class="wrapper">
+            <h2 class="section-title">神秘领域探微</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>失落的伊甸之地</h3>
+                    <p>从两河流域的古老传说，到后世对伊甸园地理位置的种种考证，我们梳理那些指向“园外”的线索。</p>
+                    <a href="#concept" class="more">阅读更多 →</a>
+                </article>
+                <article class="card">
+                    <h3>禁地与未知区域</h3>
+                    <p>地球上仍有许多人类足迹罕至的区域，它们被视为现实世界中的“园外之境”。从沙漠腹地到深海沟壑。</p>
+                    <a href="#expeditions" class="more">探索记录 →</a>
+                </article>
+                <article class="card">
+                    <h3>神话原型分析</h3>
+                    <p>原型批评视角下，伊甸园与放逐叙事如何塑造了后世文学中的“异乡人”母题。</p>
+                    <a href="#stories" class="more">查看分析 →</a>
+                </article>
+                <article class="card">
+                    <h3>文明边界假说</h3>
+                    <p>考古学与人类学如何讨论早期文明的“花园”隐喻——从定居到迁徙，从中心到边缘。</p>
+                    <a href="#faq" class="more">了解更多 →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 双栏：故事与最新 -->
+        <div class="wrapper two-col">
+            <section id="stories">
+                <h2 class="section-title" style="margin-top:0;">传说解读</h2>
+                <div class="story-panel">
+                    <h3>离开之后的第一次回望</h3>
+                    <p>在伪典与民间叙事中，亚当与夏娃离开伊甸园后的故事版本繁多。有些文本描述他们面对的第一场风暴、第一片荆棘，以及第一次自己生火取暖。</p>
+                    <p>这些叙述并非仅是对惩罚的想象，更承载着先民对农业劳作、生育痛苦与自由意志的朴素思考。园外世界，即是我们所栖居的此世。</p>
+                </div>
+                <div class="story-panel" style="margin-top:20px;">
+                    <h3>守门的天使与旋转的火焰剑</h3>
+                    <p>在艺术史上，伊甸园东门的守卫者形象从严厉的审判者，逐渐演变为一种“边界”的象征。跨过那道门，便进入历史与时间之中。</p>
+                    <p>不少现代作家借用这一意象，探讨内心世界的“安全区”与成长的必然。</p>
+                </div>
+            </section>
+            <aside>
+                <h2 class="section-title" style="margin-top:0;">最新档案</h2>
+                <ul class="list-group">
+                    <li><a href="#stories">黑海沿岸的早期聚落与“园外”迁徙假说</a><span class="date">2025-03-18</span></li>
+                    <li><a href="#stories">从失乐园到复乐园：文学中的回归渴望</a><span class="date">2025-03-10</span></li>
+                    <li><a href="#stories">古代地图中的伊甸园位置标注演变</a><span class="date">2025-02-27</span></li>
+                    <li><a href="#stories">“四河”所指向的地理原型再讨论</a><span class="date">2025-02-15</span></li>
+                    <li><a href="#stories">比较神话学视角下的黄金时代传说</a><span class="date">2025-02-03</span></li>
+                </ul>
+                <div style="background:#151a22; padding:20px; margin-top:30px; border-radius:8px;">
+                    <h3 style="color:#d9c489; font-weight:normal; margin-bottom:10px;">本月专题</h3>
+                    <p style="font-size:0.9rem;">“无花果叶与皮衣”——羞耻感如何塑造文明？我们将从人类学角度解读原初叙事中的衣着象征。</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 探秘之旅 -->
+        <section id="expeditions" class="wrapper">
+            <h2 class="section-title">探秘之旅：现实中的“园外”</h2>
+            <p style="margin-bottom:25px;">并非所有边界都存在于神话中，在现实地理中，也有许多被称作“世界边缘”的地方。我们关注那些具有神秘色彩的文化遗址与自然奇观，以谨慎求真的态度呈现。</p>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>幼发拉底河源头</h3>
+                    <p>古称“伊甸四河”之一的幼发拉底河，其上游山区至今保留着古老的梯田与神庙遗迹。文明的曙光在河谷之外的山地如何展开？</p>
+                </article>
+                <article class="card">
+                    <h3>阿拉伯半岛的空白地带</h3>
+                    <p>鲁卜哈利沙漠，意为“空旷的四分之一”。贝都因人传统中，这片沙海之外曾存在繁华的城市与花园。</p>
+                </article>
+                <article class="card">
+                    <h3>高加索的隐秘山谷</h3>
+                    <p>一些中世纪地图将伊甸园标注在高加索以南，山谷中的古老教堂与传说，为“园外”提供了另一种想象空间。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="wrapper">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-item">
+                <h3>“伊甸园之外”是一个真实存在的地方吗？</h3>
+                <p>在历史和考古学意义上，没有证据表明存在一个具体的“伊甸园”旧址。它更多是神话与文学中的象征空间，表达人类对理想状态与失落根源的思考。</p>
+            </div>
+            <div class="faq-item">
+                <h3>这个网站的内容偏向宗教还是学术？</h3>
+                <p>我们采用文化研究与神话比较的视角，不偏向特定宗教立场。内容涉及古代文本、民俗学、艺术史和人类学，尽量保持客观与多元。</p>
+            </div>
+            <div class="faq-item">
+                <h3>为什么“园外”主题吸引现代人？</h3>
+                <p>因为它触及了关于成长、乡愁、自由与责任的普遍经验。无论是离开故乡，还是脱离舒适区，“伊甸园之外”都是一种对人生阶段转换的隐喻。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>© 2025 伊甸园之外 · 探索人类想象的边界 | <a href="#concept">关于本站</a> | <a href="#faq">联系与建议</a></p>
+            <p style="margin-top:8px; font-size:0.8rem; color:#5b616b;">本站内容基于神话传说、文化研究与公开资料整理，仅供参考与思考。</p>
+        </div>
+    </footer>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
